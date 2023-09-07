@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\perpustakaan;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +15,13 @@ use App\Http\Controllers\perpustakaan;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('dashboard');
+
+Route::get('/anggota', [perpustakaan::class, 'anggota'])->name('get_anggota');
+
+Route::get('/buku', [perpustakaan::class, 'buku'])->name('get_buku');
+
+Route::get('/petugas', [perpustakaan::class, 'petugas'])->name('get_petugas');
+Route::get('/tabel', function () {
+    return view('tabel');
 });
-
-Route::get('/perpustakaan/anggota', [perpustakaan::class, 'anggota'])->name('get_anggota');
-
-Route::get('/perpustakaan/buku', [Perpustakaan::class, 'buku'])->name('get_buku');
-
-Route::get('/perpustakaan/petugas', [perpustakaan::class, 'petugas'])->name('get_petugas');

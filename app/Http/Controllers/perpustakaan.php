@@ -18,19 +18,24 @@ class perpustakaan extends Controller
     public function anggota()
     {
         //
-        return view('perpustakaan.anggota');
+        return view('formanggota');
     }
 
     public function buku()
     {
         //
-        return view('perpustakaan.buku');
+        return view('buku');
     }
 
     public function petugas()
     {
         //
-        return view('perpustakaan.petugas');
+        return view('petugas');
+    }
+    public function tabel()
+    {
+        //
+        return view('tabel');
     }
 
     /**
